@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AboutMe</title>
+    
+    <style>
+        *{
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+        }
+        .main{
+            background-image: url(/img/uzay-3.jpg);
+            width: 100%;
+            min-height: 100vh;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        .navbar{
+            height: 20px;
+            display: flex;
+            justify-content: space-evenly;
+        }
+        .navbar a{
+            text-decoration: none;            
+            justify-content: space-around;
+            color: wheat;
+            margin-top: 20px;
+            background-color: red;
+        }
+        
+        h1{
+            color: white;
+            position: absolute;
+            top: 50%;
+            left: 6%;
+            font-size: 50px;
+            text-shadow: 1px 2px 10px orange;
+        }
+        h1:hover{
+          text-decoration: underline;
+          cursor: pointer;
+        }
+        .card {
+            position: relative;
+            width: 520px;
+            height: 420px;
+            background: mediumturquoise;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 25px;
+            font-weight: bold;
+            border-radius: 15px;
+            cursor: pointer;
+            opacity: 0.3;
+            margin-left: 500px;
+            margin-top: 200px;
+            background-image: url(./img/uzay-3.jpg);
+          }
+          .card:hover{
+            opacity: 1;
+            color: white;
+          }
+          
+          .card::before,
+          .card::after {
+            position: absolute;
+            content: "";
+            width: 20%;
+            height: 20%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 25px;
+            font-weight: bold;
+            background-color: lightblue;
+            transition: all 0.5s;
+            background-image: url(./img/uzay-2.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+          }
+          .content{
+            display: inline;
+          }
+          
+          .card::before {
+            top: 0;
+            right: 0;
+            border-radius: 0 15px 0 100%;
+          }
+          
+          .card::after {
+            bottom: 0;
+            left: 0;
+            border-radius: 0 100%  0 15px;
+          }
+          
+          .card:hover::before,
+          .card:hover:after {
+            width: 100%;
+            height: 100%;
+            border-radius: 15px;
+            transition: all 0.5s;
+          }
+          
+          .card:hover:after {
+            content: "Merhaba ben Baran";
+          }
+           /* logo */
+           .foto{
+            height: 500px;
+            width: 200px;
+            margin-top: -600px;
+           }
+          .resim{
+            width: 400px;
+            height: 300px;
+            margin-top: -200px;
+            border-radius: 20px;
+            
+
+          }
+           /* yeni kart*/
+           .circle {
+            height: 20px;
+            border-radius: 50%;
+            position: absolute;
+            animation: spin 5s linear infinite; 
+        }
+        
+        @keyframes spin {
+          0% {
+            left: 100%;
+            transform: rotate(360deg);
+          }
+          25% {
+            left: 75%;
+            transform: rotate(280deg);
+
+          }
+          50% {
+            left: 50%;
+            transform: rotate(200deg);
+
+          }
+          75% {
+            left: 25%;
+            transform: rotate(160deg);
+
+          }
+          100% {
+            left: 0%;
+            transform: rotate(360deg);
+            
+          }
+        }
+        @media screen and (max-width:667px) {
+          .main{
+            width: 100%;
+            height: 100%;
+          }
+          h1{
+            position: absolute;
+            top:70px;
+          }
+          .card{
+            position: relative;
+            bottom: 90px;
+          }
+          .resim{
+            width: 200px;
+            height: 200px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+          }
+          
+        }
+        @media screen and (max-width:1025px){
+          .card{
+            height: 200px;
+            width: 200px;
+            position: relative;
+            right: 50px;
+            transform: rotateX(20px);
+            transition-property: 2s;
+            transition-duration: 2s;
+          }
+          .circle{
+            width: 20px;
+            height: 10px;
+          }
+        }
+        @media screen and (max-width:679px) {
+          .circle{
+           display: none;
+          }
+        }
+        @media screen and (max-width:669px) {
+          html{
+            min-width: 100%;
+            min-height: 100vh;
+          }
+          
+        }
+        @media screen and (max-width:668px) {
+          .main{
+            background-position: center;
+          }
+          h1{
+            position: absolute;
+            top: 300px;
+          }
+        }
+        /*
+        @media screen and (max-width:670px){
+          .main{
+          background-size: auto;
+          }
+          .navbar{
+            font-size: 30px;
+          }
+        }
+
+        @media screen and (max-width:594px) {
+          .main{
+            background-size: auto;
+            background-position: center;
+          }
+   
+        }
+        */
+
+        @media screen and (max-width:675px) {
+          .navbar{
+            display: grid;
+            flex-direction: column;
+            justify-content: start;
+            gap: 10px;
+          }
+          .navbar a{
+            display: flex;
+            justify-content: start;
+            background-color: transparent;
+          }
+          .main{
+            width: 100%;
+            min-height: 100vh;
+          }
+        }
+        @media screen and (max-width:652px){
+          .card{
+            position: relative;
+            right: 300px;
+          }
+        }
+        @media screen and (max-width:445px){
+          .card{
+            display: none;
+          }
+        }
+
+    </style>
+
+</head>
+<body>
+    <div class="main">
+        <div class="navbar">
+            <a href="index.html">Homepage</a>
+            <a href="aboutme.html">About me</a>
+            <a href="iletişim.html">iletişim</a>
+        </div>
+        
+        <div class="content">
+            <h1>Baran <br> ÇİÇEK</h1>
+            <div class="about-me"> 
+                <div class="card"></div>
+            </div>
+        </div>
+          <div class="circle">
+           <img  class="resim" src="./img/resim.png" alt="">
+          </div>
+    </div>
+    <!-- animasyon ekle -->
+</body>
+</html>
